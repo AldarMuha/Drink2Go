@@ -1,0 +1,32 @@
+.slider-pagination {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(3, 62px);
+    gap: 8px;
+  }
+}
+
+.slider-pagination__button {
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  background-image: linear-gradient(to bottom, transparent 10px, $white 10px, $white 14px, transparent 14px, transparent 24px);
+  box-sizing: 62px 24px;
+  background-position: center;
+  width: 62px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.slider-pagination__item--current .slider-pagination__button {
+  background-image: linear-gradient(to bottom, transparent 10px, $primary 10px, $primary 14px, transparent 14px, transparent 24px);
+}

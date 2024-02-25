@@ -1,0 +1,26 @@
+.map__container {
+  width: 100%;
+  height: 420px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 540px;
+  }
+}
+
+.map__container .map__image {
+  display: none;
+}
+
+.map__container--nojs .map__image {
+  display: block;
+}
+
+.map__image img {
+  display: block;
+  margin: 0 auto;
+}

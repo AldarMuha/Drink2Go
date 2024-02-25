@@ -1,0 +1,54 @@
+.filter {
+  margin-top: 4px;
+  margin-bottom: 36px;
+  padding: 0 17px 0 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content;
+    column-gap: 30px;
+    row-gap: 40px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    grid-column: 1/2;
+    grid-row: 3/5;
+    margin: 0;
+  }
+}
+
+.filter__buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    justify-content: center;
+    grid-template-columns: min-content min-content;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 10px;
+    align-items: start;
+    grid-row: 4/5;
+    grid-template-columns: repeat(2, 149px);
+  }
+}
+
+.filter__button--reset {
+  background-color: $white;
+  color: $primary;
+
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
+  }
+}

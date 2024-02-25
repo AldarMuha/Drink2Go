@@ -1,0 +1,23 @@
+.card-list {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-bottom: 70px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+    grid-template-columns: repeat(3, 317px);
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+}

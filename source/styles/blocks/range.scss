@@ -1,0 +1,42 @@
+
+.target {
+  border: none;
+  border-radius: 0;
+  background-color: #e2e2e2;
+  height: 2px;
+  margin-top: 31px;
+  margin-bottom: 35px;
+}
+
+.connect {
+  height: 4px;
+  background-color: $primary-light;
+}
+
+.handle {
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray;
+  }
+}
+
+.horizontal .handle {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  top: -12px;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.horizontal .handle-lower {
+  right: -24px;
+}
+
+.horizontal .handle-upper {
+  right: -24px;
+}

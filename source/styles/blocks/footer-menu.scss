@@ -1,0 +1,114 @@
+.footer-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 223px 1fr 223px;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 9px;
+    margin-bottom: 0;
+    grid-template-columns: 317px 1fr 317px;
+  }
+}
+
+.footer-menu__item {
+  padding: 20px;
+  border-bottom: 1px solid $secondary;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.footer-menu__item-title {
+  margin: 0;
+  margin-bottom: 12px;
+  color: $primary;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+}
+
+.footer-menu__item--contacts .footer-menu__item-title {
+  margin-bottom: 20px;
+}
+
+
+.footer-submenu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+
+.footer-submenu__link {
+  display: block;
+  padding: 8px 0;
+  color: $light-black;
+  font-family: $font;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.footer-menu__address {
+  position: relative;
+  margin: 0;
+  margin-bottom: 16px;
+  padding-left: 19px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 13px;
+    height: 16px;
+    background-image: url("../../images/address.svg");
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+  }
+}
+
+.footer-menu__phone {
+  position: relative;
+  padding-left: 19px;
+  color: $light-black;
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 13px;
+    height: 16px;
+    background-image: url("../../images/phone.svg");
+  }
+}

@@ -1,0 +1,121 @@
+.slider {
+  &--flat-white {
+    background-color: $flat-white;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(to bottom, $flat-white 640px, $white 640px);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: none;
+    }
+  }
+
+  &--lavender-latte {
+    background-color: $lavender-latte;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(to bottom, $lavender-latte 640px, $white 640px);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: none;
+    }
+  }
+
+  &--esspresso {
+    background-color: $esspresso;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(to bottom, $esspresso 640px, $white 640px);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: none;
+    }
+  }
+}
+
+.slider__container {
+  position: relative;
+}
+
+.slider__badge {
+  margin: 0 auto;
+  position: absolute;
+  top: 310px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $primary;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 180px;
+    left: 735px;
+    transform: translateX(0);
+  }
+}
+
+.slider__buttons {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+  }
+}
+
+.slider__button {
+  display: block;
+  border: none;
+  background-color: transparent;
+  padding: 0 5px 0 4px;
+  height: 656px;
+  cursor: pointer;
+  color: $primary;
+
+  &--next {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background-image: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &:disabled {
+    background-color: $gray;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px;
+    width: 80px;
+    height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+  }
+}
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
